@@ -39,7 +39,7 @@ func Points(size int, values *arraylist.List) plotter.XYs {
 	for i:= range pts{
 		pts[i].X=float64(i+1)
 		y,_:=values.Get(i)
-		pts[i].Y=float64(y)
+		pts[i].Y=float64(y.(int))
 	}
 	return pts
 }
