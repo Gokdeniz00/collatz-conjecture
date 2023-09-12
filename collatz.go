@@ -12,12 +12,14 @@ import (
 
 func main(){
 	var number int
-	fmt.Print("Enter a number for Collatz Conjecture:")
+	fmt.Print("Enter a integer number for Collatz Conjecture:")
 	fmt.Scan(&number)
 	
 	ycoords,xcoords:=assign(number)
+	titlestr:=fmt.Sprintf("Collatz Conjecture chart for %d", number)
 
 	graph := chart.Chart{
+		Title: titlestr,
 		Series: []chart.Series{
 			chart.ContinuousSeries{
 				XValues: xcoords,
